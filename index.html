@@ -27,7 +27,7 @@
       directionalLight.position.set(1, 1, 1);
       scene.add(directionalLight);
       
-      var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.5, 1,16);
+      var cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 1,16);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0x0000ff });
       var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder.position.z = -5;
