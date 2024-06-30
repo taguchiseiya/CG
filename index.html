@@ -44,14 +44,14 @@
       scene.add(axisHelper);
 
       var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.3, 1.2,32);
-      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+      var cylinderMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
       var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder.rotation.z=1.57;
       dumbbell.add(cylinder);
       scene.add(cylinder);
       
       var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.25, 0.8,32);
-      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+      var cylinderMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
       var cylinder1 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder1.rotation.z=1.57;
       cylinder1.position.x=1;
@@ -67,7 +67,7 @@
       scene.add(cylinder2);
 
       var cylinderGeometry = new THREE.CylinderGeometry(0.25, 0.3, 0.8,32);
-      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+      var cylinderMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
       var cylinder3 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder3.rotation.z=1.57;
       cylinder3.position.x=-1;
