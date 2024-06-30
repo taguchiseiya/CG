@@ -1,2 +1,40 @@
-a
+<!DOCTYYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <script src=”https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js”></script>
+</head>
+
+<body>
+  <script>
+    var init = function() {
+      var width = 800,
+      height = 600;
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize(width, height);
+      document.body.appendChild(renderer.domElement);
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+      var directionalLight = new THREE.DirectionalLight(0xffffff);
+      directionalLight.position.set(1, 1, 1);
+      scene.add(directionalLight);
+      var geometry = new THREE.BoxGeometry(1, 1, 1);
+      var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+      var box = new THREE.Mesh(geometry, material);
+      box.position.z = -5;
+      scene.add(box);
+
+      var update = function() {
+        requestAnimationFrame(update);
+        box.rotation.x += 0.01;
+        box.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      };
+      update();
+      }
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
 
