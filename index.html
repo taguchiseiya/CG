@@ -12,14 +12,19 @@
     var init = function() {
       var width = 800,
       height = 600;
+      
       var renderer = new THREE.WebGLRenderer();
       renderer.setSize(width, height);
       document.body.appendChild(renderer.domElement);
+      
       var scene = new THREE.Scene();
+      
       var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+      
       var directionalLight = new THREE.DirectionalLight(0xffffff);
       directionalLight.position.set(1, 1, 1);
       scene.add(directionalLight);
+      
       var geometry = new THREE.BoxGeometry(1, 1, 1);
       var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
       var box = new THREE.Mesh(geometry, material);
