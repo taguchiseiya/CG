@@ -47,6 +47,13 @@
       cylinder1.position.x=1;
       scene.add(cylinder1);
 
+      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.3,16);
+      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
+      var cylinder2 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
+      cylinder2.rotation.z=1.57;
+      cylinder2.position.x=-1;
+      scene.add(cylinder2);
+
       renderer.render(scene, camera);
       
       }
