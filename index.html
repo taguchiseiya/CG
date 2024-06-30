@@ -36,18 +36,18 @@
       const axisHelper = new THREE.AxisHelper(2);
       scene.add(axisHelper);
 
-      var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.3, 3,32);
+      var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.3, 2.2,32);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder.rotation.z=1.57;
       dumbbell.add(cylinder);
       scene.add(cylinder);
       
-      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.3,10);
+      var cylinderGeometry = new THREE.CylinderGeometry(0.2, 0.3, 0.4,32);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder1 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder1.rotation.z=1.57;
-      cylinder1.position.x=1.5;
+      cylinder1.position.x=1.1;
       dumbbell.add(cylinder1);
       scene.add(cylinder1);
 
@@ -55,9 +55,25 @@
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder2 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder2.rotation.z=1.57;
-      cylinder2.position.x=-1.5;
+      cylinder2.position.x=1.5;
       dumbbell.add(cylinder2);
       scene.add(cylinder2);
+
+      var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.2, 0.4,32);
+      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
+      var cylinder3 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
+      cylinder3.rotation.z=1.57;
+      cylinder3.position.x=-1.1;
+      dumbbell.add(cylinder3);
+      scene.add(cylinder3);
+
+      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.1,10);
+      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
+      var cylinder3 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
+      cylinder4.rotation.z=1.57;
+      cylinder4.position.x=-1.5;
+      dumbbell.add(cylinder4);
+      scene.add(cylinder4);
 
       renderer.render(scene, camera);
       
