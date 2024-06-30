@@ -75,13 +75,7 @@
       dumbbell.add(cylinder4);
       scene.add(cylinder4);
 
-      var update = function() {
-        requestAnimationFrame(update);
-        dumbbell.rotation.x += 0.01;
-        dumbbell.rotation.y += 0.01;
-        renderer.render(scene, camera);
-      };
-      update();
+      renderer.render(scene, camera);
       
       }
     window.addEventListener('DOMContentLoaded', init);
