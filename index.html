@@ -33,9 +33,13 @@
       box.position.z = -5;
       scene.add(box);
 
-      var controls=new OrbitControls(camera,renderer.render);
-
-      renderer.render(scene, camera);
+      var update = function() {
+        requestAnimationFrame(update);
+        box.rotation.x += 0.01;
+        box.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      };
+      update();
       
       }
     window.addEventListener('DOMContentLoaded', init);
