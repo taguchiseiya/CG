@@ -36,10 +36,10 @@
       const axisHelper = new THREE.AxisHelper(2);
       scene.add(axisHelper);
 
-      var cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 1,16);
+      var cylinderGeometry = new THREE.CylinderGeometry(0.1, 0.1, 1,16);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
-      cylinder.rotation.y=1.57;
+      cylinder.rotation.z=1.57;
       scene.add(cylinder);
 
       renderer.render(scene, camera);
