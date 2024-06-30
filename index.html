@@ -42,13 +42,7 @@
       cylinder.position.z = -5;
       scene.add(cylinder);
 
-      var update = function() {
-        requestAnimationFrame(update);
-        cylinder.rotation.x += 0.01;
-        cylinder.rotation.y += 0.01;
-        renderer.render(scene, camera);
-      };
-      update();
+      renderer.render(scene, camera);
       
       }
     window.addEventListener('DOMContentLoaded', init);
