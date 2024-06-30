@@ -26,6 +26,12 @@
       var directionalLight = new THREE.DirectionalLight(0xffffff);
       directionalLight.position.set(1, 1, 1);
       scene.add(directionalLight);
+
+      const gridHelper = new THREE.GridHelper(2,10); 
+      scene.add(gridHelper);
+      const axisHelper = new THREE.AxisHelper(2);
+      scene.add(axisHelper);
+
       
       var cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 1,16);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0x0000ff });
