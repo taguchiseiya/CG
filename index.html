@@ -82,14 +82,6 @@
       dumbbell.add(cylinder4);
       scene.add(cylinder4);
 
-      var cylinderGeometry = new THREE.CylinderGeometry(0.25, 0.25, 0.3,32);
-      var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0x101010 });
-      var cylinder5 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
-      cylinder5.rotation.z=1.57;
-      cylinder5.position.x=-1.7;
-      dumbbell.add(cylinder5);
-      scene.add(cylinder5);
-
       renderer.render(scene, camera);
       
       }
