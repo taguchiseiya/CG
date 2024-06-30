@@ -36,8 +36,7 @@
       const dumbbell =new THREE.Object3D();
       
       var camera = new THREE.PerspectiveCamera(45,width/height,1,1000);
-      camera.position.set(0, 0, 1000);
-      var controls = new OrbitControls(camera,document.body);
+      camera.position.set(1,1 , 5);
 
       const gridHelper = new THREE.GridHelper(2,10); 
       scene.add(gridHelper);
