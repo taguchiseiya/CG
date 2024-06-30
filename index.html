@@ -30,7 +30,7 @@
       var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.5, 1);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0x0000ff });
       var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
-      box.position.z = -5;
+      cylinder.position.z = -5;
       scene.add(cylinder);
 
       var update = function() {
