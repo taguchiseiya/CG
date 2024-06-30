@@ -36,14 +36,14 @@
       const axisHelper = new THREE.AxisHelper(2);
       scene.add(axisHelper);
 
-      var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.3, 3,16);
+      var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.3, 3,32);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder.rotation.z=1.57;
       dumbbell.add(cylinder);
       scene.add(cylinder);
       
-      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.3,16);
+      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.3,10);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder1 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder1.rotation.z=1.57;
@@ -51,7 +51,7 @@
       dumbbell.add(cylinder1);
       scene.add(cylinder1);
 
-      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.3,16);
+      var cylinderGeometry = new THREE.CylinderGeometry(1, 1, 0.3,10);
       var cylinderMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
       var cylinder2 = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
       cylinder2.rotation.z=1.57;
