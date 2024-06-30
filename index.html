@@ -18,9 +18,7 @@
 </head>
 
 <body>
-  <script type="module">
-    import * as THREE from "three";
-    import{OrbitControls}from"three/addons/controls/OrbitControls.js";
+  <script>
     var init = function() {
       var width = 800,
       height = 600;
@@ -41,9 +39,9 @@
       camera.position.set(0, 0, 1000);
       var controls = new OrbitControls(camera,document.body);
 
-      var gridHelper = new THREE.GridHelper(2,10); 
+      const gridHelper = new THREE.GridHelper(2,10); 
       scene.add(gridHelper);
-      var axisHelper = new THREE.AxisHelper(2);
+      const axisHelper = new THREE.AxisHelper(2);
       scene.add(axisHelper);
 
       var cylinderGeometry = new THREE.CylinderGeometry(0.3, 0.3, 1.2,32);
